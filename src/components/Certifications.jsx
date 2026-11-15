@@ -1,11 +1,12 @@
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
 const CERTS = [
-  { title: 'Python Programming', issuer: 'Great Learning' },
-  { title: 'Java Programming', issuer: 'Great Learning' },
-  { title: 'Generative AI Fundamentals', issuer: 'Great Learning' },
-  { title: 'Prompt Engineering for Generative AI', issuer: 'Great Learning' },
-]
+  { title: "Python Programming", issuer: "Great Learning" },
+  { title: "Java Programming", issuer: "Great Learning" },
+  { title: "Generative AI Fundamentals", issuer: "Great Learning" },
+  { title: "Prompt Engineering for Generative AI", issuer: "Great Learning" },
+  { title: "Neural Networks and Deep Learning", issuer: "Coursera" },
+];
 
 export default function Certifications() {
   return (
@@ -44,14 +45,24 @@ export default function Certifications() {
         ))}
       </div>
     </section>
-  )
+  );
 }
 
 function CertIcon(props) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" {...props}>
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      {...props}
+    >
       <path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" />
-      <path d="M8.5 13.5 7 21l5-2.5L17 21l-1.5-7.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M8.5 13.5 7 21l5-2.5L17 21l-1.5-7.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
-  )
+  );
 }
