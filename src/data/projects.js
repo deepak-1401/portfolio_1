@@ -10,7 +10,6 @@ export const projects = [
       { label: "ROC-AUC", value: "0.863" },
       { label: "F1-Score", value: "63.4%" },
       { label: "Recall", value: "58.0%" },
-      { label: "Est. net benefit", value: "$135,100" },
     ],
     github:
       "https://github.com/deepak-1401/Customer-Churn-Prediction-System-.git/deepak-1401",
