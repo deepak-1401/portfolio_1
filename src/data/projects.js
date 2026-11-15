@@ -22,7 +22,7 @@ export const projects = [
       "A Flutter + Firebase mobile app that logs daily spending, categorizes transactions in real time, and syncs across devices via Firestore.",
     stack: ["Flutter", "Firebase", "Firestore", "Dart"],
     github: "https://github.com/deepak-1401/Expense_tracker.git",
-    demo: "#",
+    demo: null,
     accent: "from-neon-blue to-neon-cyan",
   },
 ];
