@@ -15,7 +15,7 @@ export default function Experience() {
         <h2 className="text-3xl md:text-4xl font-semibold">The path so far</h2>
       </motion.div>
 
-      <div className="relative max-w-2xl">
+      <div className="relative max-w-3xl">
         <div className="absolute left-[7px] top-2 bottom-2 w-px bg-gradient-to-b from-neon-blue via-neon-purple to-transparent" />
 
         <div className="space-y-10">
@@ -24,7 +24,7 @@ export default function Experience() {
               key={item.title}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.4 }}
+              viewport={{ once: true, amount: 0.25 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="relative pl-9"
             >
@@ -38,6 +38,32 @@ export default function Experience() {
                 <p className="text-sm text-muted leading-relaxed">
                   {item.description}
                 </p>
+
+                {item.highlights && (
+                  <ul className="mt-4 space-y-2.5">
+                    {item.highlights.map((point) => (
+                      <li
+                        key={point}
+                        className="relative pl-5 text-sm text-muted leading-relaxed before:absolute before:left-0 before:top-[0.6em] before:h-1.5 before:w-1.5 before:rounded-full before:bg-grad-primary"
+                      >
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {item.stack && (
+                  <div className="flex flex-wrap gap-2 mt-5">
+                    {item.stack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="text-[11px] px-2.5 py-1 rounded-full border border-white/10 text-muted"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}

@@ -23,10 +23,12 @@ export default function Projects() {
             key={project.title}
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.5, delay: i * 0.08 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: (i % 2) * 0.08 }}
             whileHover={{ y: -6 }}
-            className="glass rounded-2xl overflow-hidden group"
+            className={`glass rounded-2xl overflow-hidden group ${
+              project.featured ? 'sm:col-span-2' : ''
+            }`}
           >
             <div
               className={`h-36 bg-gradient-to-br ${project.accent} relative flex items-end p-5 opacity-90`}
@@ -41,6 +43,22 @@ export default function Projects() {
               <p className="text-muted text-sm leading-relaxed mb-5">
                 {project.description}
               </p>
+
+              {project.metrics && (
+                <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-6">
+                  {project.metrics.map((m) => (
+                    <div
+                      key={m.label}
+                      className="rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-center"
+                    >
+                      <p className="font-display text-lg text-gradient">
+                        {m.value}
+                      </p>
+                      <p className="text-[11px] text-muted mt-0.5">{m.label}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
 
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.stack.map((tech) => (
@@ -62,14 +80,16 @@ export default function Projects() {
                 >
                   GitHub
                 </a>
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex-1 text-center text-sm py-2.5 rounded-lg bg-grad-primary text-white hover:shadow-glow-sm transition-shadow"
-                >
-                  Live Demo
-                </a>
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex-1 text-center text-sm py-2.5 rounded-lg bg-grad-primary text-white hover:shadow-glow-sm transition-shadow"
+                  >
+                    Live Demo
+                  </a>
+                )}
               </div>
             </div>
           </motion.div>

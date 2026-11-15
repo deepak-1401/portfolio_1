@@ -9,11 +9,20 @@ export const timeline = [
   },
   {
     type: 'work',
-    title: 'Internship / Freelance Developer',
-    org: 'Independent',
-    period: '2024 — Present',
+    title: 'Machine Learning Intern',
+    org: 'Active Galaxy (AG Group of Companies)',
+    period: 'May 2026 — Jun 2026',
     description:
-      'Built Flutter applications with Firebase backends for small clients, covering authentication, real-time data, and UI polish.',
+      'Built a Customer Churn Prediction System that turns raw telecom subscription data into actionable retention strategies.',
+    highlights: [
+      'Built an end-to-end supervised ML pipeline, from data ingestion to model evaluation, following the CRISP-DM methodology.',
+      'Designed a preprocessing pipeline handling mixed feature types and missing data, with one-hot encoding and StandardScaler normalization.',
+      'Tackled severe class imbalance with SMOTE and balanced class weighting, prioritizing detection of the minority (churn) class.',
+      'Trained and tuned Logistic Regression, Random Forest, XGBoost, and Gradient Boosting models using GridSearchCV.',
+      'Best model (Logistic Regression) reached 84.0% accuracy and 0.863 ROC-AUC, optimized for F1 (63.4%) and Recall (58.0%) to reduce costly false negatives.',
+      'Used feature importance to identify contract type and customer tenure as the main churn drivers, informing a retention strategy with an estimated net benefit of $135,100.',
+    ],
+    stack: ['Python', 'Scikit-Learn', 'XGBoost', 'Pandas', 'Imbalanced-Learn (SMOTE)'],
   },
   {
     type: 'education',
