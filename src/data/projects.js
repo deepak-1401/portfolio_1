@@ -12,8 +12,8 @@ export const projects = [
       { label: "Recall", value: "58.0%" },
     ],
     github:
-      "https://github.com/deepak-1401/Customer-Churn-Prediction-System-.git/deepak-1401",
-    demo: null,
+      "https://github.com/deepak-1401/Customer-Churn-Prediction-System-.git",
+    demo: "https://leave-or-stay.streamlit.app/",
     accent: "from-neon-purple to-neon-cyan",
   },
   {

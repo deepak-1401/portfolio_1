@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion'
-import { projects } from '../data/projects'
+import { motion } from "framer-motion";
+import { projects } from "../data/projects";
 
 export default function Projects() {
   return (
@@ -27,7 +27,7 @@ export default function Projects() {
             transition={{ duration: 0.5, delay: (i % 2) * 0.08 }}
             whileHover={{ y: -6 }}
             className={`glass rounded-2xl overflow-hidden group ${
-              project.featured ? 'sm:col-span-2' : ''
+              project.featured ? "sm:col-span-2" : ""
             }`}
           >
             <div
@@ -45,7 +45,7 @@ export default function Projects() {
               </p>
 
               {project.metrics && (
-                <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-6">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
                   {project.metrics.map((m) => (
                     <div
                       key={m.label}
@@ -96,5 +96,5 @@ export default function Projects() {
         ))}
       </div>
     </section>
-  )
+  );
 }
